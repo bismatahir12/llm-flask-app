@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask AI</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Ask AI</h1>
+    <input type="text" id="promptInput" placeholder="Enter prompt here">
+    <button onclick="sendPrompt()">Generate</button>
+    <p id="response"></p>
+</body>
+</html>
