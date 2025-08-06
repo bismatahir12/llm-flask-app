@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:,">
+
+    <meta charset="UTF-8">
+    <title>Free LLM Generator</title>
+</head>
+<body>
+    <h2>Ask Free LLM</h2>
+    <input type="text" id="prompt" placeholder="Enter your prompt">
+    <button onclick="sendPrompt()">Submit</button>
+    <p><strong>Response:</strong> <span id="response"></span></p>
+
+    <script>
+        async function sendPrompt() {
+            const prompt = document.getElementById("prompt").value;
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt })
+            });
+            const data = await response.json();
+            document.getElementById("response").innerText = data.success ? data.response : data.error;
+        }
+    </script>
+</body>
+</html>
