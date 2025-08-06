@@ -1,10 +1,9 @@
-
 # LLM-Powered Flask Microservice 
 
 This project is a modular Flask API integrated with OpenAI's GPT model. It takes a prompt, returns a generated response, and includes a basic HTML+JS client.
 
 ##  Live App
- https://llm-flask-render.onrender.com
+https://llm-flask-app-git-main-bisma-tahirs-projects.vercel.app/
 
 ##  Features
 - LLM wrapper in `llm_wrapper.py`
